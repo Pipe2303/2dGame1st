@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
     }
     public void Death()
     {
-        Debug.Log("Death");
+        Destroy(gameObject);
         Application.Quit();
     }
 }
