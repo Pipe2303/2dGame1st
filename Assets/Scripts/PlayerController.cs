@@ -20,7 +20,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Slider slideHealth;
 
     public bool startGame = false;
-   
+
+    public Joystick joystick;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +34,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
+        horizontalInput = joystick.Horizontal;
         // if the player is moving activate animation of slide
         
         if (_rigidbody.velocity.x > 0f || _rigidbody.velocity.x < 0f)
